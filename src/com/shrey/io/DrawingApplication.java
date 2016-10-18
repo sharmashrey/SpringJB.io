@@ -13,7 +13,7 @@ public class DrawingApplication {
 	
 		//old deprecated resource
 		//	BeanFactory factory = new XmlBeanFactory (new FileSystemResource("spring.xml")) ;	
-		ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
+		ApplicationContext context = new ClassPathXmlApplicationContext("file:spring.xml");
 		Triangle tri = (Triangle) context.getBean("triangle");
 		tri.draw();
 	}
