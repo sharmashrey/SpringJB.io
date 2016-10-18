@@ -4,6 +4,12 @@
 
 <beans>
 
-	<bean id="triangle" class ="com.shrey.io.Triangle" />
+	<bean id="triangle" class ="com.shrey.io.Triangle">
+			<!--   <constructor-arg type ="int" index="0" value="39" /> -->
+			<!-- index in case of multiple arguments -->
+			
+			<constructor-arg type ="java.lang.String" value="Isosceles" /> 
+			 <!-- since String is an object  -->  
+	</bean>
 	
 </beans>
