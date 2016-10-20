@@ -5,11 +5,24 @@
 <beans>
 
 	<bean id="triangle" class ="com.shrey.io.Triangle">
-			<!--   <constructor-arg type ="int" index="0" value="39" /> -->
-			<!-- index in case of multiple arguments -->
-			
-			<constructor-arg type ="java.lang.String" value="Isosceles" /> 
-			 <!-- since String is an object  -->  
+		<property name="pointA" ref="zeroPoint" />
+		<property name="pointB" ref="point2" />	<!-- //refernce to a bean below it and assigns bean to pointB -->
+		<property name="pointC" ref="point3" />	<!-- can have as many nested objects as we want -->
+	</bean>
+	
+	<bean id="zeroPoint" class ="com.shrey.io.Point">
+	  		<property name="x" value="0" />
+			<property name="y" value="0" />
+	</bean>
+	
+	<bean id="point2" class ="com.shrey.io.Point">
+	  		<property name="x" value="-20" />
+			<property name="y" value="0" />
+	</bean>
+	
+	<bean id="point3" class ="com.shrey.io.Point">
+	  		<property name="x" value="20" />
+			<property name="y" value="0" />
 	</bean>
 	
 </beans>

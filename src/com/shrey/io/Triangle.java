@@ -2,38 +2,39 @@ package com.shrey.io;
 
 public class Triangle {
 	
-	private String type; 
+	private Point PointA;
+	private Point PointB;
+	private Point PointC;
 	
-	private int height;
-	
-	public int getHeight() {
-		return height;
+	public Point getPointA() {
+		return PointA;
 	}
 
-	public Triangle(String type){
-	this.type = type;	
-	}
-	
-	//if we set only one constructor-arg. in bean ,
-	//spring  might get confused if you only send a single constructor-arg
-	public Triangle(int height){
-		this.height = height;	
-	}
-	
-	public Triangle(String type, int height){
-		this.type = type;
-		this.height= height;
-	}
-	
-	public String getType() {
-		return type;
+	public void setPointA(Point pointA) {
+		PointA = pointA;
 	}
 
-	public void setType(String type) {
-		this.type = type;
+	public Point getPointB() {
+		return PointB;
+	}
+
+	public void setPointB(Point pointB) {
+		PointB = pointB;
+	}
+
+	public Point getPointC() {
+		return PointC;
+	}
+
+	public void setPointC(Point pointC) {
+		PointC = pointC;
 	}
 
 	public void draw(){
-	System.out.println("Triangle Drawn is "+ getType() +" of height "+ getHeight() );
-	}
+	System.out.println("PointA x = "+ getPointA().getX()  +" y = " + getPointA().getY() );
+	System.out.println("PointB x = "+ getPointB().getX()  +" y = " + getPointB().getY() );
+	System.out.println("PointC x = "+ getPointC().getX()  +" y = " + getPointC().getY() );
+ 	}
+	
+	
 }
